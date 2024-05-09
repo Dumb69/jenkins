@@ -1,24 +1,20 @@
 pipeline{
   tools{
     jdk "JAVA_HOME"
-    mavan "M2_HOME"
+    maven "M2_HOME"
   }
   agent any
   stages{
     stage("compile"){
       steps{
-        git ""
+        git "https://github.com/Dumb69/jenkins.git"
       }
     }
     stage("test"){
       steps{
-        git ""
+        sh "mvn test"
       }
     }
-    stage("compile"){
-      steps{
-        git ""
-      }
-    }
+    
      }
 }
