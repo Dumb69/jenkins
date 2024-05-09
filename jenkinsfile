@@ -15,10 +15,6 @@ pipeline{
         git ""
       }
     }
-    stage("package"){
-      steps{
-        sh "mv package"
-      }
-    }
+   
   }
 }
