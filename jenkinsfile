@@ -1,0 +1,24 @@
+pipeline{
+  tools{
+    jdk "JAVA_HOME"
+    mavan "M2_HOME"
+  }
+  agent any
+  stages{
+    stage("compile"){
+      steps{
+        git ""
+      }
+    }
+    stage("test"){
+      steps{
+        git ""
+      }
+    }
+    stage("package"){
+      steps{
+        sh "mv package"
+      }
+    }
+  }
+}
